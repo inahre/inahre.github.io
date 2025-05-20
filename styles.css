@@ -1,0 +1,537 @@
+/* Importing Source Code Pro Font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Merriweather', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Fix anchor scroll offset for fixed nav */
+#about, #portfolio, #contact {
+    scroll-margin-top: 100px; /* adjust based on your navbar height */
+  }
+
+h1, h2 {
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 5%;
+    background: #fafafa;
+    color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+nav h1 {
+    margin-right: 40px;
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+  
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+}
+nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url('images/hero-bg.jpg') center/cover;
+    text-align: center;
+    color: #333;
+}
+.hero-content {
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+.btn:hover {
+    background: #111;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px 20px;
+    text-align: left;
+    gap: 30px;
+}
+.about-image {
+    flex: 0 0 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+.about-image img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 0;
+}
+.about-text {
+    flex: 1;
+    order: 1;
+}
+.about-text h2 {
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* Portfolio Stacked Sections */
+#portfolio h3 {
+    font-size: 1.8rem;
+    font-family: 'Source Code Pro', monospace;
+    margin-top: 60px;
+    text-align: center;
+}
+#portfolio h4 {
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+    font-weight: 500;
+    text-align: center;
+}
+.subsection {
+    margin-bottom: 40px;
+}
+
+/* Portfolio Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+.gallery-item img {
+    width: 100%;
+    border-radius: 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.gallery-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Graphic Design Gallery Layout */
+#design .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+form input, form textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+form button {
+    padding: 12px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+form button:hover {
+    background: #111;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #fafafa;
+    color: #333;
+    font-weight: 300;
+    border-top: 1px solid #ddd;
+}
+
+.project-thumbs {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.thumb {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.thumb img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.thumb:hover {
+    transform: scale(1.05);
+}
+
+.thumb p {
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+.poster-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  .poster-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .poster img {
+    height: 100%;
+    max-height: 600px; /* sets consistent size */
+    width: auto;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .poster-single img {
+    max-height: 600px;
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .design-title {
+    text-align: center;
+    font-size: 0.99rem;
+    font-family: 'Source Code Pro', monospace;
+    color: #444;
+    margin-top: 8px;
+  }
+
+  .poster-desc {
+    max-width: 400px;
+    font-size: 0.9rem;
+    font-family: 'Source Code Pro', monospace;
+    font-style: italic;
+    margin: 10px auto 0;
+    text-align: center;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  .contact-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .contact-links li {
+    margin: 8px 0;
+  }
+  
+  .contact-links a {
+    color: #333;
+    text-decoration: none;
+    font-family: 'Source Code Pro', monospace;
+    transition: 0.3s;
+  }
+  
+  .contact-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Subsection Headings */
+#ai h5 {
+    font-size: 1.2rem;
+    margin: 40px 0 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Captions below images */
+  .caption {
+    font-size: 0.85rem;
+    color: #555;
+    font-family: 'Source Code Pro', monospace;
+    font-style: italic;
+    text-align: center;
+    margin-top: 8px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+  }
+
+
+.return-btn {
+    display: inline-block;
+    margin: 100px auto;
+    padding: 10px 20px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9rem;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .return-btn:hover {
+    background: #111;
+  }
+  
+  .ai-project {
+    padding: 20px 20px;
+  }
+
+  .sub-gallery {
+    padding: 20px 20px;
+  }
+  
+/* AI Section Thumbnail Styling */
+
+.ai-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding-left: 20px;
+    gap: 30px;
+}
+
+.ai-thumbnails .thumb {
+    height: 200px; /* Fixed height for consistent size */
+    width: auto; /* Allow width to adjust based on image */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stack image and title */
+    align-items: center; /* Center title horizontally */
+}
+
+.ai-thumbnails .thumb img {
+    height: 100%; /* Image fills container height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop to fill, prevents stretching */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ai-thumbnails .thumb:hover {
+    transform: scale(1.05);
+}
+
+.ai-thumbnails .thumb p {
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+.thumb-title {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.95rem;
+    text-align: center;
+    color: #333;
+    margin-top: 8px;
+}
+
+
+  .ai-description {
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .ai-features {
+    list-style-position: inside; /* Makes bullets closer to the text */
+    padding-left: 0; /* Removes default padding */
+    margin: 0;
+    font-family: 'Merriweather', sans-serif; /* Keeps font consistent */
+    font-size: 1rem; /* Same font size for all text */
+    text-align: center; /* Centers the list items */
+  }
+  
+  .ai-features li {
+    margin: 10px 0; /* Provides a bit of spacing between each item */
+    font-weight: 400;
+  }
+  
+  .ai-tools {
+    text-align: center;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1rem;
+    color: #444;
+  }
+
+/* Common formatting for all AI-related image galleries */
+/* Common formatting for all AI-related image galleries */
+.ai-formatting, .ai-formatting-leather {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Spacing between images */
+    flex-wrap: wrap; /* Allow images to stack if the screen is too small */
+    margin: 30px 0;
+  }
+  
+  .ai-formatting .gallery-item, .ai-formatting-leather .gallery-item-leather {
+    text-align: center; /* Ensures the caption text is centered under the image */
+  }
+  
+  .ai-formatting .gallery-item img, .ai-formatting-leather .gallery-item-leather img {
+    width: 800px; /* Standard image width */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+  }
+  
+  /* Specifically target the second image in the "Generative Sketches" section */
+  .ai-formatting-leather .gallery-item-leather:nth-child(2) img {
+    width: 400px; /* Adjust width of the second image */
+    height: auto; /* Keep aspect ratio */
+  }
+
+  .uniform-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+  }
+  
+  .uniform-gallery .gallery-item img {
+    height: 300px; /* keeps row height consistent */
+    width: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+  }
+  
+  .uniform-gallery .gallery-item img:hover {
+    transform: scale(1.03);
+  }
+
+.custom-photo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-photo-grid .row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.custom-photo-grid .row img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* Two-image rows: split 50/50 with spacing */
+.custom-photo-grid .row img:only-child {
+  max-width: 100%;
+}
+
+.custom-photo-grid .row img:nth-child(2),
+.custom-photo-grid .row img:nth-child(1):nth-last-child(2) {
+  width: calc(50% - 10px); /* minus half the gap */
+}
+
+

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ina Hrešć</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Ina Hrešć</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Work Space</h2>
+            <p>Design | Photography | Generative AI | Creative Coding</p>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="about-image">
+            <img src="images/about_me5.jpg" alt="Ina Hrešć">
+        </div>
+
+        <div class="container">
+            <h2>About</h2>
+            <p>I'm a creative technologist with a passion for design and a keen eye for detail. My journey began as a photographer and graphic designer, where I developed a strong foundation in visual storytelling and a love for crafting visually striking designs. <p>
+                <p>With a Master's degree in Data Science and AI for the Creative Industries (Distinction), I've expanded my skillset to include advanced AI techniques. I'm particularly interested in exploring the intersection of art and technology, using AI as a tool to enhance creativity and efficiency.<p>
+                <p>My thesis project, a collaboration with a renowned costume designer, focused on using AI to transform hand-drawn sketches into photorealistic renderings. This project not only showcased the potential of AI in fashion design but also highlighted the importance of ethical AI practices and sustainable fashion.<p>
+                <p>I'm excited to apply my skills and knowledge to a variety of design roles, from creating captivating book covers to developing innovative AI-powered design tools. I'm eager to work with like-minded individuals who share my passion for pushing the boundaries of creativity and technology.</p>
+        </div>
+    </section>
+    
+    <section id="portfolio">
+        <div class="container">
+          <h2>Creative Works</h2>
+      
+          <div class="portfolio-tabs">
+            <button class="tab-btn active" data-target="ai">Generative AI | Creative Coding</button>
+            <button class="tab-btn" data-target="film">Film Photography</button>
+            <button class="tab-btn" data-target="design">Graphic Art | Video Transformation</button>
+            <button class="tab-btn" data-target="posters">Posters</button>
+          </div>
+
+          <div id="ai" class="tab-content">
+            <div class="ai-thumbnails">
+                <div class="thumb" data-project="ai1">
+                    <img src="images/ai/thumbnail.jpeg" alt="AI Project Thumbnail">
+                    <p class="thumb-title">From Sketch to Reality</p>
+                </div>
+            </div>
+        
+             
+          
+            <!-- Full project view -->
+            <div id="ai1" class="ai-project hidden">
+              <button class="return-btn">← Back to Gallery</button>
+          
+              <p class="ai-description">
+                <strong>AI-Enhanced Co-Design for Genderless Fashion</strong><br><br>
+                This project explores the integration of artificial intelligence into the fashion design process through a co-design framework. In collaboration with an independent garment designer, the project focuses on creating genderless fashion visualisations using bespoke datasets composed of the designer's hand-drawn sketches and my own original photography.
+                <br><br>
+                The gallery below features:
+                <ul class="ai-features">
+                  <li>Original sketches and photography</li>
+                  <li>Generative outputs (sketches + photoreal renders)</li>
+                  <li>Final post-processed results</li>
+                </ul>
+                <br>
+                <div class="ai-tools">
+                  AI tools used: <code>Stable Diffusion</code>, <code>ControlNet</code>, <code>DreamBooth</code>.
+                </div>
+              </p>
+          
+              <!-- Datasets -->
+              <h5>Datasets</h5>
+              <div class="ai-formatting">
+                <div class="gallery-item">
+                  <img src="images/ai/backdropdataset.png" alt="Backdrop dataset">
+                  <p class="caption">Photography dataset used for fine-tuning — influencing textures, lighting, and aesthetics.</p>
+                </div>
+                <div class="gallery-item">
+                  <img src="images/ai/sketchsamples.png" alt="Sketch samples">
+                  <p class="caption">Sample of original sketches used to fine-tune a model and generate additional designs.</p>
+                </div>
+            </div>
+          
+              <!-- Generative Sketches -->
+              <h5>Generative Sketches – Sample Outputs</h5>
+              <div class="ai-formatting-leather">
+                <div class="gallery-item-leather">
+                  <img src="images/ai/gensketchsamples.png" alt="Generated sketch variations">
+                  <p class="caption">Pleats by the designer vs. generated front and side angles.</p>
+                </div>
+                <div class="gallery-item-leather">
+                  <img src="images/ai/genleathersketch.png" alt="Leather sketch">
+                  <p class="caption">Generated leather jacket — generalising new material despite it not being in the dataset.</p>
+                </div>
+              </div>
+          
+              <!-- Fine-tuning Comparison -->
+              <h5>Fine-Tuning Comparison</h5>
+              <div class="ai-formatting">
+                <div class="gallery-item">
+                  <img src="images/ai/prefinetuning.png" alt="Pre fine-tuning">
+                  <p class="caption">Photoreal render before fine-tuning.</p>
+                </div>
+                <div class="gallery-item">
+                  <img src="images/ai/postfinetuning.png" alt="Post fine-tuning">
+                  <p class="caption">Photoreal render after fine-tuning.</p>
+                </div>
+              </div>
+          
+              <!-- Final Post-Processed Renders -->
+              <h5>Final Results (Post-Processed)</h5>
+              <div class="ai-formatting">
+                <div class="gallery-item">
+                  <img src="images/ai/finalresultsdesignersketches.png" alt="Final renders – designer sketches">
+                  <p class="caption">Final renders of original sketches — preserving mannequin structures and genderless silhouettes.</p>
+                </div>
+                <div class="gallery-item">
+                  <img src="images/ai/finalresultsgensketches.png" alt="Final renders – generated sketches">
+                  <p class="caption">Final renders of generated sketches after post-processing in Adobe Photoshop.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div id="film" class="tab-content hidden">
+            <!-- Project Thumbnails -->
+            <div class="project-thumbs">
+              <div class="thumb" data-project="film1">
+                <img src="images/film/project1/001.jpeg" alt="Project 1">
+                <p>Brutal Perspectives | VOID magazine feature</p>
+              </div>
+              <div class="thumb" data-project="film2">
+                <img src="images/film/project2/005.jpg" alt="Project 2">
+                <p>Nueés | Independent Dance Production</p>
+              </div>
+              <div class="thumb" data-project="film3">
+                <img src="images/film/project3/010.jpg" alt="Project 1">
+                <p>Tasteless VIE, DJ Collective Vienna | Gig Photography</p>
+              </div>
+              <div class="thumb" data-project="film4">
+                <img src="images/film/project4/009.jpeg" alt="Project 3">
+                <p>JOSSLE, Musician | Press Shoot</p>
+              </div>
+              <div class="thumb" data-project="film5">
+                <img src="images/film/project5/008.jpg" alt="Project 5">
+                <p>What We Have We Hold | Theatre Production</p>
+              </div>
+              <div class="thumb" data-project="film6">
+                <img src="images/film/project6/004.jpeg" alt="Project 6">
+                <p>Cheesmore, Band | Gig Photography</p>
+              </div>
+            </div>
+
+            <!-- Project 1 Gallery -->
+            <div id="film1" class="sub-gallery hidden">
+              <button class="return-btn">← Back to Gallery</button>
+              <h4>Brutal Perspectives</h4>
+              <div class="custom-photo-grid">
+                <div class="row row-1"><img src="images/film/project1/001.jpeg" alt=""></div>
+                <div class="row row-2"><img src="images/film/project1/002.jpg" alt=""><img src="images/film/project1/003.jpg" alt=""></div>
+                <div class="row row-3"><img src="images/film/project1/004.jpg" alt=""></div>
+                <div class="row row-4"><img src="images/film/project1/005.jpg" alt=""><img src="images/film/project1/006.jpg" alt=""></div>
+                <div class="row row-5"><img src="images/film/project1/007.jpg" alt=""><img src="images/film/project1/019.jpg" alt=""></div>
+                <div class="row row-6"><img src="images/film/project1/009.jpg" alt=""></div>
+                <div class="row row-7"><img src="images/film/project1/010.jpg" alt=""><img src="images/film/project1/011.jpg" alt=""></div>
+                <div class="row row-8"><img src="images/film/project1/012.jpg" alt=""><img src="images/film/project1/013.jpg" alt=""></div>
+                <div class="row row-9"><img src="images/film/project1/014.jpg" alt=""></div>
+                <div class="row row-10"><img src="images/film/project1/015.jpg" alt=""><img src="images/film/project1/016.jpg" alt=""></div>
+                <div class="row row-11"><img src="images/film/project1/017.jpg" alt=""></div>
+                <div class="row row-12"><img src="images/film/project1/018.jpg" alt=""><img src="images/film/project1/008.jpg" alt=""></div>
+                <div class="row row-13"><img src="images/film/project1/020.jpg" alt=""><img src="images/film/project1/021.jpg" alt=""></div>
+                <div class="row row-14"><img src="images/film/project1/022.jpg" alt=""></div>
+                <div class="row row-15"><img src="images/film/project1/023.jpg" alt=""></div>
+              </div>
+            </div>
+
+            <!-- Project 2 Gallery -->
+            <div id="film2" class="sub-gallery hidden">
+              <button class="return-btn">← Back to Gallery</button>
+              <h4>Nuées</h4>
+              <div class="custom-photo-grid">
+                <div class="row row-1"><img src="images/film/project2/0.jpg" alt=""><img src="images/film/project2/00.jpg" alt=""></div>
+                <div class="row row-2"><img src="images/film/project2/001.jpg" alt=""><img src="images/film/project2/002.jpg" alt=""></div>
+                <div class="row row-3"><img src="images/film/project2/03.jpg" alt=""></div>
+                <div class="row row-4"><img src="images/film/project2/003.JPG" alt=""><img src="images/film/project2/004.JPG" alt=""></div>
+                <div class="row row-5"><img src="images/film/project2/005.jpg" alt=""><img src="images/film/project2/006.jpg" alt=""></div>
+                <div class="row row-6"><img src="images/film/project2/007.jpg" alt=""></div>
+                <div class="row row-7"><img src="images/film/project2/008.jpg" alt=""><img src="images/film/project2/009.jpg" alt=""></div>
+                <div class="row row-8"><img src="images/film/project2/010.jpg" alt=""><img src="images/film/project2/011.jpg" alt=""></div>
+                <div class="row row-9"><img src="images/film/project2/012.JPG" alt=""></div>
+                <div class="row row-10"><img src="images/film/project2/013.jpg" alt=""><img src="images/film/project2/014.jpg" alt=""></div>
+                <div class="row row-11"><img src="images/film/project2/015.jpg" alt=""><img src="images/film/project2/016.jpg" alt=""></div>
+                <div class="row row-12"><img src="images/film/project2/017.jpg" alt=""></div>
+                <div class="row row-13"><img src="images/film/project2/018.JPG" alt=""><img src="images/film/project2/019.jpg" alt=""></div>
+                <div class="row row-14"><img src="images/film/project2/020.jpg" alt=""><img src="images/film/project2/021.jpg" alt=""></div>
+                <div class="row row-15"><img src="images/film/project2/023.jpg" alt=""><img src="images/film/project2/024.jpg" alt=""></div>
+                <div class="row row-16"><img src="images/film/project2/025.jpg" alt=""></div>
+                <div class="row row-17"><img src="images/film/project2/026.jpg" alt=""><img src="images/film/project2/027.jpg" alt=""></div>
+                <div class="row row-18"><img src="images/film/project2/028.GIF" alt=""></div>
+              </div>
+            </div>
+
+            <!-- Project 3 Gallery -->
+            <!-- Project 3 Gallery -->
+            <div id="film3" class="sub-gallery hidden">
+              <button class="return-btn">← Back to Gallery</button>
+              <h4>Nuees B&W</h4>
+              <div class="custom-photo-grid">
+                <div class="row row-1"><img src="images/film/project3/001.jpg" alt=""><img src="images/film/project3/002.jpg" alt=""></div>
+                <div class="row row-2"><img src="images/film/project3/003.jpg" alt=""></div>
+                <div class="row row-3"><img src="images/film/project3/004.jpg" alt=""><img src="images/film/project3/005.jpg" alt=""></div>
+                <div class="row row-4"><img src="images/film/project3/006.jpg" alt=""><img src="images/film/project3/007.jpg" alt=""></div>
+                <div class="row row-5"><img src="images/film/project3/008.jpg" alt=""><img src="images/film/project3/009.jpg" alt=""></div>
+                <div class="row row-6"><img src="images/film/project3/010.jpg" alt=""></div>
+                <div class="row row-7"><img src="images/film/project3/011.jpg" alt=""><img src="images/film/project3/012.jpg" alt=""></div>
+                <div class="row row-8"><img src="images/film/project3/013.jpg" alt=""><img src="images/film/project3/014.jpg" alt=""></div>
+                <div class="row row-9"><img src="images/film/project3/015.jpg" alt=""></div>
+              </div>
+            </div>
+
+
+            <!-- Project 4 Gallery -->
+            <div id="film4" class="sub-gallery hidden">
+              <button class="return-btn">← Back to Gallery</button>
+              <h4>JOSSLE</h4>
+              <div class="custom-photo-grid">
+                <div class="row row-1"><img src="images/film/project4/001.jpg" alt=""><img src="images/film/project4/002.jpg" alt=""></div>
+                <div class="row row-2"><img src="images/film/project4/003.jpg" alt=""><img src="images/film/project4/004.jpeg" alt=""></div>
+                <div class="row row-3"><img src="images/film/project4/005.jpeg" alt=""><img src="images/film/project4/006.jpeg" alt=""></div>
+                <div class="row row-4"><img src="images/film/project4/007.jpeg" alt=""><img src="images/film/project4/010.jpeg" alt=""></div>
+                <div class="row row-5"><img src="images/film/project4/009.jpeg" alt=""><img src="images/film/project4/008.jpg" alt=""></div>
+                <div class="row row-6"><img src="images/film/project4/011.jpeg" alt=""><img src="images/film/project4/012.jpg" alt=""></div>
+                <div class="row row-7"><img src="images/film/project4/013.jpg" alt=""></div>
+              </div>
+            </div>
+
+            <!-- Project 5 Gallery -->
+            <div id="film5" class="sub-gallery hidden">
+              <button class="return-btn">← Back to Gallery</button>
+              <h4>What We Have We Hold</h4>
+              <div class="custom-photo-grid">
+                <div class="row row-1"><img src="images/film/project5/001.png" alt=""></div>
+                <div class="row row-2"><img src="images/film/project5/002.jpg" alt=""><img src="images/film/project5/007.jpg" alt=""></div>
+                <div class="row row-3"><img src="images/film/project5/004.jpg" alt=""><img src="images/film/project5/005.jpg" alt=""></div>
+                <div class="row row-4"><img src="images/film/project5/006.jpg" alt=""><img src="images/film/project5/003.jpg" alt=""></div>
+                <div class="row row-5"><img src="images/film/project5/008.jpg" alt=""><img src="images/film/project5/009.jpg" alt=""></div>
+                <div class="row row-6"><img src="images/film/project5/010.jpg" alt=""></div>
+              </div>
+            </div>
+
+            <!-- Project 6 Gallery -->
+            <div id="film6" class="sub-gallery hidden">
+              <button class="return-btn">← Back to Gallery</button>
+              <h4>Cheesmore</h4>
+              <div class="custom-photo-grid">
+                <div class="row row-1"><img src="images/film/project6/001.jpeg" alt=""></div>
+                <div class="row row-2"><img src="images/film/project6/002.jpeg" alt=""><img src="images/film/project6/003.jpg" alt=""></div>
+                <div class="row row-3"><img src="images/film/project6/004.jpeg" alt=""><img src="images/film/project6/005.jpeg" alt=""></div>
+                <div class="row row-4"><img src="images/film/project6/006.jpeg" alt=""></div>
+                <div class="row row-5"><img src="images/film/project6/007.jpeg" alt=""><img src="images/film/project6/008.jpeg" alt=""></div>
+                <div class="row row-6"><img src="images/film/project6/009.jpeg" alt=""></div>
+              </div>
+            </div>
+          </div> <!-- End of #film tab-content -->
+
+
+      
+            <div id="design" class="tab-content hidden">
+                <h4>Selected Graphic Design Work</h4>
+                <div class="gallery">
+                  <div class="gallery-item">
+                    <video autoplay loop muted playsinline width="100%" height="auto">
+                    <source src="images/design/staticsignals.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                    <p class="design-title">Signals in the Static | Video Transformation | for Poiesis Collective's "Send & Receive" at Hypha Studios | April - May 2025</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="images/design/slenderghsts.png" alt="Design 2">
+                    <p class="design-title">slender ghosts</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="images/design/childrenshospital.gif" alt="Design 3">
+                    <p class="design-title">crush crush crush</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="images/design/soschnellx3.png" alt="Design 4">
+                    <p class="design-title">soschnellx3</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="images/design/antwerp.png" alt="Design 5">
+                    <p class="design-title">caution 45G1</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="images/design/poland1.png" alt="Design 6">
+                    <p class="design-title">reflections</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="images/design/jossle.png" alt="Design 7">
+                    <p class="design-title">behind bars</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="images/design/mirrors.png" alt="Design 8">
+                    <p class="design-title">mirrors</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="images/design/segments.png" alt="Design 9">
+                    <p class="design-title">segments</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="images/design/lines.jpg" alt="Design 10">
+                    <p class="design-title">lines</p>
+                  </div>
+                </div>
+              </div>
+      
+          <div id="posters" class="tab-content hidden">
+            <h4>Selected Posters</h4>
+            <div class="poster-gallery">
+              <div class="poster-row">
+                <div class="poster">
+                  <a href="images/posters/nuees.png" data-lightbox="posters"><img src="images/posters/nuees.png" alt="Nuées poster 1"></a>
+                  <p class="poster-desc">Promotional poster made for 'Nuées', a costume-centric dance performance designed and directed by Louise Carton.</p>
+                </div>
+                <div class="poster">
+                  <a href="images/posters/nuees2.png" data-lightbox="posters"><img src="images/posters/nuees2.png" alt="Nuées poster 2"></a>
+                  <p class="poster-desc">Nuées – reinterpreted poster.</p>
+                </div>
+              </div>
+          
+              <div class="poster-single">
+                <a href="images/posters/falling.png" data-lightbox="posters"><img src="images/posters/falling.png" alt="Graphic poster"></a>
+                <p class="poster-desc">Post Magazine contribution – a once-off cultural publication.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+
+            <ul class="contact-links">
+              <li><a href="mailto:inahresc@gmail.com">inahresc@gmail.com</a></li>
+              <li><a href="https://github.com/inahre" target="_blank">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/ina-hresc" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Ina Hrešć. All rights reserved.</p>
+    </footer>
+</body>
+</html>
